@@ -1,9 +1,5 @@
-package com.comi;
+package com.comi.ap;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )

@@ -10,15 +10,37 @@
   <name>spring-hibernate-hello</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
+  <properties> 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+    <mockito.version>2.10.0</mockito.version>
+    <junit.version>4.12</junit.version>
+    <mainclass>com.comi.ap.App</mainclass>
   </properties>
+
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+            <configuration>
+                <mainClass>${mainclass}</mainClass>
+                <executable>java</executable>
+                <additionalClasspathElements>
+                    <!-- <element>${project.basedir}/lib/util.jar</element> -->
+                </additionalClasspathElements>
+            </configuration>
+        </plugin>
+      </plugins>
+    </build>
+
 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
