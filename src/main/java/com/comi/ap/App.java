@@ -1,5 +1,7 @@
 package com.comi.ap;
 
+import java.util.Date;
+
 import com.comi.ap.service.MyService;
 import com.comi.ap.utils.SpringContext;
 
@@ -23,6 +25,8 @@ public class App {
         
 
         context.close();
+
+        logger.info("App End.");
     }
 
     public void setMyService(MyService myService) {
@@ -34,6 +38,8 @@ public class App {
     }
 
     public void execute() {
-        this.myService.run();
+        String name = "Comi";
+        Date date = new Date();
+        this.myService.insertData(name, date);
     }
 }

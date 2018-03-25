@@ -4,8 +4,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="data" class="com.comi.ap.model.Data"/>
     
-    <bean id="myService" class="com.comi.ap.service.MyService"/>
+    <bean id="myService" class="com.comi.ap.service.MyService">
+        <property name="data" ref="data" />
+    </bean>
 
 	<bean id="app" class="com.comi.ap.App">
 		<property name="myService" ref="myService"></property>

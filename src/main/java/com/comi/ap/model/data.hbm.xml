@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.comi.ap.model.Data" table="data">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="50"/>
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="date"/>
+        </property>
+    </class>
+</hibernate-mapping>
+
+
+<!-- <hibernate-mapping>  
+	<class name="com.e104.ap.hbm.Permatch" table="PERMATCH">
+		<composite-id>
+			<key-property name="custNo" column="CUSTNO" type="java.lang.Long" />
+			<key-property name="idNo" column="ID_NO" type="java.lang.Long" />
+			<key-property name="jobNo" column="JOBNO" type="java.lang.Long" />
+			<key-property name="inputDate" column="INPUTDATE" type="java.util.Date" />
+		</composite-id>
+		<property name="flag" column="FLAG" type="java.lang.Integer" />			
+		<property name="familyName" column="FAMILYNAME" type="java.lang.String" />
+		<property name="firstName" column="FIRSTNAME" type="java.lang.String" />		
+		<property name="email" column="EMAIL" type="java.lang.String" />		
+		<property name="password" column="PASSWORD" type="java.lang.String" />				
+	</class>
+		
+	<class name="com.e104.ap.hbm.PermatchTsmc" table="PERMATCH_TSMC">
+		<composite-id>
+			<key-property name="mr" column="MR" type="java.lang.String" />		
+			<key-property name="idNo" column="ID_NO" type="java.lang.Long" />	
+		</composite-id>
+		<property name="createDate" column="CREATE_DATE" type="java.util.Date" />		
+	</class>	
+</hibernate-mapping> -->
