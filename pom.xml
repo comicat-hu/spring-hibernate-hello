@@ -13,6 +13,8 @@
   <properties> 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+    <spring.version>3.2.18.RELEASE</spring.version>
+    <hibernate.version>3.6.10.Final</hibernate.version>
     <mockito.version>2.10.0</mockito.version>
     <junit.version>4.12</junit.version>
     <mainclass>com.comi.ap.App</mainclass>
@@ -33,10 +35,48 @@
             </configuration>
         </plugin>
       </plugins>
+
+
+      <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+              <include>**</include>
+            </includes>
+        </resource>
+      </resources>
     </build>
 
 
   <dependencies>
+    <!-- Spring -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!-- Hibernate framework -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+
+
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
+    </dependency>
+
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

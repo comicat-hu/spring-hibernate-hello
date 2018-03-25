@@ -1,3 +1,5 @@
 # Spring-Hibernate-Hello
 
-example
+XML Mapping example
+
+Basic App generate by `mvn archetype:generate`
